@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<style>
+  .pred {text-align:center;
+        font-size:18px}
+</style> 
+
+<style>
+  .result {text-align:center;
+          font-size:25px;
+          font-weight:bold}
+</style>
+
+  <head>
+    <title>Data</title>
+    </head>
+
+  <body>
+    <div class='pred'>
+      <h3>Enter Input Features:</h3>
+      <form action='{{url_for('predict')}}' method='POST'>
+        Experience:
+        <p><input type='text' name='exp'/></p>
+        Test Score:
+        <p><input type='text' name='tsc'/></p>
+        Interview Score:
+        <p><input type='text' name='inc'/></p><br>
+        <p><input type='submit' value='Predict' /></p>
+      </form>
+    </div>
+      <br><br>
+
+    <div class='result'>
+      {{prediction}}
+    </div>
+
+  </body>
+</html>
